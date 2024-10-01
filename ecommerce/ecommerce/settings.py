@@ -33,6 +33,10 @@ INSTALLED_APPS = [
     'App_Shop',
 ]
 
+
+#CUSTOM USER MODEL
+AUTH_USER_MODEL='App_Account.User'
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
 
