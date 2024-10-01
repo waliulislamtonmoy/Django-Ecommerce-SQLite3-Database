@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'App_Account',
+    'App_Shop',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
