@@ -7,5 +7,6 @@ from App_Account import views
 urlpatterns = [
     path("signup/",views.signup,name='signup'),
     path("login/",views.userlogin,name='login'),
-    path("logout/",views.user_logout,name="logout")
+    path("logout/",views.user_logout,name="logout"),
+    path("profile",views.user_profile,name="profile")
 ]

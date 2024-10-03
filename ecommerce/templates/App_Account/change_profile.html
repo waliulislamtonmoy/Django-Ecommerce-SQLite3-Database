@@ -1,8 +1,20 @@
 {% extends "base.html" %}
-<div>{% block title %}change profile{% endblock title %}</div>
+<div>{% block title %}Profileogin{% endblock title %}</div>
 <div>{% load tailwind_filters %} {% load crispy_forms_tags %}</div>
 <div>
   {% block content %}
-  <p>change profile page</p>
+  <div class="p-3 border">
+    <div class="p-5">
+      <form method="POST">
+        {% csrf_token %} {{form |crispy}}
+        <button
+          class="px-2 py-2 bg-green-300 w-full block rounded hover:bg-green-500"
+          type="submit"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
   {% endblock content %}
 </div>
