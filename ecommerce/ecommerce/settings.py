@@ -122,6 +122,7 @@ MEDIAFILES_DIRS=MEDIA_ROOT
 
 
 LOGIN_URL='/accounts/login/'
+LOGOUT_URL='/accounts/login/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

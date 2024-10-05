@@ -39,6 +39,44 @@
       <ul
         class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white"
       >
+      {% if request.user.is_authenticated %}
+      <li>
+          <a
+            href="{% url "App_Shop:home" %}"
+            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="{% url "App_Account:profile" %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+            >Cart
+          </a>
+        </li>
+        <li>
+          <a
+            href="{% url "App_Account:profile" %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+            >Orders
+          </a>
+        </li>
+        <li>
+          <a
+            href="{% url "App_Account:profile" %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
+            >Profile
+          </a>
+        </li>
+        <li>
+          <a
+            href="{% url "App_Account:logout" %}"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700"
+            >Logout</a
+          >
+        </li>
+      {% else %}
         <li>
           <a
             href=""
@@ -47,9 +85,7 @@
             >Home</a
           >
         </li>
-
-        
-        <li>
+      <li>
           <a
             href="{% url "App_Account:signup" %}"
             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700"
@@ -63,20 +99,12 @@
             >Login</a
           >
         </li>
-        <li>
-          <a
-            href="{% url "App_Account:logout" %}"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700"
-            >Logout</a
-          >
-        </li>
-        <li>
-          <a
-            href="{% url "App_Account:profile" %}"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500"
-            >Profile
-          </a>
-        </li>
+      {% endif %}
+        
+
+        
+        
+        
       </ul>
     </div>
   </div>
